@@ -1,0 +1,2 @@
+[{"id":12,"label":"person","outE":{"friends":[{"id":13,"inV":3,"properties":{"weight":0.1}}]},
+  "properties":{"name":[{"id":14,"value":"steve"}],"age":[{"id":15,"value":31}]}}]

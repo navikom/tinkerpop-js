@@ -1,0 +1,21 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "globals": {
+    "document": 1
+  },
+  "rules": {
+    "no-throw-literal": 1,
+    "func-names": 0,
+    "no-param-reassign": 0,
+    "arrow-body-style": 0,
+    "max-len": 0,
+    "new-cap": 0,
+    "global-require": 0,
+    "no-underscore-dangle": 0
+  }
+}

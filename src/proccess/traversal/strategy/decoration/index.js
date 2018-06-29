@@ -1,0 +1,1 @@
+export { ConnectiveStrategy } from './ConnectiveStrategy';

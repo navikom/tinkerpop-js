@@ -1,0 +1,55 @@
+const GraphSONTokens = {
+  CLASS: "@class",
+  VALUETYPE: "@type",
+  VALUEPROP: "@value",
+  ID: "id",
+  TYPE: "type",
+  VALUE: "value",
+  PROPERTIES: "properties",
+  KEY: "key",
+  EDGE: "edge",
+  EDGES: "edges",
+  ELEMENT: "ELEMENT",
+  VERTEX: "vertex",
+  VERTEX_PROPERTY: "vertexProperty",
+  VERTICES: "vertices",
+  IN: "inV",
+  OUT: "outV",
+  IN_E: "inE",
+  OUT_E: "outE",
+  LABEL: "label",
+  LABELS: "labels",
+  OBJECTS: "objects",
+  IN_LABEL: "inVLabel",
+  OUT_LABEL: "outVLabel",
+  GREMLIN_TYPE_NAMESPACE: "g",
+  GREMLINX_TYPE_NAMESPACE: "gx",
+
+// TraversalExplanation Tokens
+  ORIGINAL: "original",
+  FINAL: "final",
+  INTERMEDIATE: "intermediate",
+  CATEGORY: "category",
+  TRAVERSAL: "traversal",
+  STRATEGY: "strategy",
+
+// TraversalMetrics Tokens
+  METRICS: "metrics",
+  DURATION: "dur",
+  NAME: "name",
+  COUNTS: "counts",
+  ANNOTATIONS: "annotations",
+
+  BULK: "bulk",
+
+  SCRIPT: "script",
+  LANGUAGE: "language",
+  ARGUMENTS: "arguments",
+  PREDICATE: "predicate",
+  AND: "and",
+  OR: "or",
+  SOURCE: "source",
+  STEP: "step",
+};
+
+export default GraphSONTokens;

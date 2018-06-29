@@ -1,0 +1,18 @@
+dist
+node_modules
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+*.iml
+yarn.lock
+
+report
+test
+
+scripts
+
+webpack.config.js
+webpack.prod.config.js
+tests.webpack.js
