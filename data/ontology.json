@@ -1,0 +1,940 @@
+[
+  {
+    "id": "V1",
+    "label": "MasterSchema",
+    "outE": {
+      "hasOntology": [
+        {
+          "id": "E23",
+          "label": "hasOntology",
+          "inVLabel": "Ontology",
+          "outVLabel": "MasterSchema",
+          "inV": "V21",
+          "outV": "V1"
+        }
+      ],
+      "hasDataType": [
+        {
+          "id": "E9",
+          "label": "hasDataType",
+          "inVLabel": "DataType",
+          "outVLabel": "MasterSchema",
+          "inV": "V8",
+          "outV": "V1"
+        },
+        {
+          "id": "E10",
+          "label": "hasDataType",
+          "inVLabel": "DataType",
+          "outVLabel": "MasterSchema",
+          "inV": "V9",
+          "outV": "V1"
+        }
+      ]
+    },
+    "inE": {
+      "hasMasterSchema": [
+        {
+          "id": "E11",
+          "label": "hasMasterSchema",
+          "inVLabel": "MasterSchema",
+          "outVLabel": "Ontology",
+          "inV": "V1",
+          "outV": "V6"
+        },
+        {
+          "id": "E21",
+          "label": "hasMasterSchema",
+          "inVLabel": "MasterSchema",
+          "outVLabel": "Ontology",
+          "inV": "V1",
+          "outV": "V19"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P43",
+          "value": "PrimarySchema",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V2",
+    "label": "Schema",
+    "outE": {
+      "hasOntologyClassProperty": [
+        {
+          "id": "E31",
+          "label": "hasOntologyClassProperty",
+          "inVLabel": "OntologyClassProperty",
+          "outVLabel": "Schema",
+          "inV": "V14",
+          "outV": "V2"
+        }
+      ]
+    },
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E4",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V2",
+          "outV": "V4"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P44",
+          "value": "Class",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V3",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E3",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V3",
+          "outV": "V5"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P40",
+          "value": "Object Property",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V4",
+    "label": "OntologyClass",
+    "outE": {
+      "hasModel": [
+        {
+          "id": "E27",
+          "label": "hasModel",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "OntologyClass",
+          "inV": "V24",
+          "outV": "V4"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E4",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V2",
+          "outV": "V4"
+        }
+      ],
+      "hasOntologyClassProperty": []
+    },
+    "inE": {
+      "hasOntologyClass": [
+        {
+          "id": "E5",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V4",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P54",
+          "value": "OntologyClass",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V5",
+    "label": "OntologyClass",
+    "outE": {
+      "hasModel": [
+        {
+          "id": "E30",
+          "label": "hasModel",
+          "inVLabel": "ObjectProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V27",
+          "outV": "V5"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E3",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V3",
+          "outV": "V5"
+        }
+      ]
+    },
+    "inE": {
+      "hasOntologyClass": [
+        {
+          "id": "E6",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V5",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P47",
+          "value": "ObjectProperty",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V6",
+    "label": "Ontology",
+    "outE": {
+      "hasOntologyClass": [
+        {
+          "id": "E5",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V4",
+          "outV": "V6"
+        },
+        {
+          "id": "E6",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V5",
+          "outV": "V6"
+        },
+        {
+          "id": "E8",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V7",
+          "outV": "V6"
+        }
+      ],
+      "hasRoot": [],
+      "hasMasterSchema": [
+        {
+          "id": "E11",
+          "label": "hasMasterSchema",
+          "inVLabel": "MasterSchema",
+          "outVLabel": "Ontology",
+          "inV": "V1",
+          "outV": "V6"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E15",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "Ontology",
+          "inV": "V13",
+          "outV": "V6"
+        }
+      ],
+      "hasAnnotationProperty": [
+        {
+          "id": "E18",
+          "label": "hasAnnotationProperty",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V16",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P38",
+          "value": "BuilderData",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V7",
+    "label": "OntologyClass",
+    "outE": {
+      "hasModel": [
+        {
+          "id": "E29",
+          "label": "hasModel",
+          "inVLabel": "DataProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V26",
+          "outV": "V7"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E12",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V10",
+          "outV": "V7"
+        }
+      ]
+    },
+    "inE": {
+      "hasOntologyClass": [
+        {
+          "id": "E8",
+          "label": "hasOntologyClass",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V7",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P0",
+          "value": "DataProperty",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V8",
+    "label": "DataType",
+    "inE": {
+      "hasDataType": [
+        {
+          "id": "E9",
+          "label": "hasDataType",
+          "inVLabel": "DataType",
+          "outVLabel": "MasterSchema",
+          "inV": "V8",
+          "outV": "V1"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P1",
+          "value": "int",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V9",
+    "label": "DataType",
+    "inE": {
+      "hasDataType": [
+        {
+          "id": "E10",
+          "label": "hasDataType",
+          "inVLabel": "DataType",
+          "outVLabel": "MasterSchema",
+          "inV": "V9",
+          "outV": "V1"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P2",
+          "value": "string",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V10",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E12",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V10",
+          "outV": "V7"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P41",
+          "value": "Data Property",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V11",
+    "label": "OntologyClass",
+    "outE": {
+      "hasSchema": [
+        {
+          "id": "E14",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V12",
+          "outV": "V11"
+        }
+      ]
+    },
+    "inE": {
+      "isSubclassOf": [
+        {
+          "id": "E20",
+          "label": "isSubclassOf",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "OntologyClass",
+          "inV": "V11",
+          "outV": "V18"
+        }
+      ],
+      "hasRoot": [
+        {
+          "id": "E25",
+          "label": "hasRoot",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V11",
+          "outV": "V19"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P4",
+          "value": "Thing",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V12",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E14",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V12",
+          "outV": "V11"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P5",
+          "value": "Thing",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V13",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E15",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "Ontology",
+          "inV": "V13",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P27",
+          "value": "My Fav Ontology",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V14",
+    "label": "OntologyClassProperty",
+    "outE": {
+      "hasSchema": []
+    },
+    "inE": {
+      "hasOntologyClassProperty": [
+        {
+          "id": "E31",
+          "label": "hasOntologyClassProperty",
+          "inVLabel": "OntologyClassProperty",
+          "outVLabel": "Schema",
+          "inV": "V14",
+          "outV": "V2"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P7",
+          "value": "test",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V16",
+    "label": "OntologyClass",
+    "outE": {
+      "hasModel": [
+        {
+          "id": "E26",
+          "label": "hasModel",
+          "inVLabel": "AnnotationProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V23",
+          "outV": "V16"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E19",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V17",
+          "outV": "V16"
+        }
+      ]
+    },
+    "inE": {
+      "hasAnnotationProperty": [
+        {
+          "id": "E18",
+          "label": "hasAnnotationProperty",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V16",
+          "outV": "V6"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P9",
+          "value": "AnnotationProperty",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V17",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E19",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V17",
+          "outV": "V16"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P39",
+          "value": "Annotation Property",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V18",
+    "label": "OntologyClass",
+    "outE": {
+      "hasModel": [
+        {
+          "id": "E28",
+          "label": "hasModel",
+          "inVLabel": "Environment",
+          "outVLabel": "OntologyClass",
+          "inV": "V25",
+          "outV": "V18"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E24",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V22",
+          "outV": "V18"
+        }
+      ],
+      "isSubclassOf": [
+        {
+          "id": "E20",
+          "label": "isSubclassOf",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "OntologyClass",
+          "inV": "V11",
+          "outV": "V18"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P47",
+          "value": "Environment",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V19",
+    "label": "Ontology",
+    "outE": {
+      "hasRoot": [
+        {
+          "id": "E25",
+          "label": "hasRoot",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "Ontology",
+          "inV": "V11",
+          "outV": "V19"
+        }
+      ],
+      "hasMasterSchema": [
+        {
+          "id": "E21",
+          "label": "hasMasterSchema",
+          "inVLabel": "MasterSchema",
+          "outVLabel": "Ontology",
+          "inV": "V1",
+          "outV": "V19"
+        }
+      ],
+      "hasSchema": [
+        {
+          "id": "E22",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "Ontology",
+          "inV": "V20",
+          "outV": "V19"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P48",
+          "value": "Second Ontology",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V20",
+    "label": "Schema",
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E22",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "Ontology",
+          "inV": "V20",
+          "outV": "V19"
+        }
+      ]
+    },
+    "properties": {
+      "displayText": [
+        {
+          "id": "P49",
+          "value": "My Fav Ontology 2",
+          "label": "displayText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V21",
+    "label": "Ontology",
+    "inE": {
+      "hasOntology": [
+        {
+          "id": "E23",
+          "label": "hasOntology",
+          "inVLabel": "Ontology",
+          "outVLabel": "MasterSchema",
+          "inV": "V21",
+          "outV": "V1"
+        }
+      ]
+    },
+    "properties": {
+      "name": [
+        {
+          "id": "P0",
+          "value": "Builder",
+          "label": "name"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V22",
+    "label": "Schema",
+    "outE": {
+      "hasOntologyClassProperty": [
+        {
+          "id": "E32",
+          "label": "hasOntologyClassProperty",
+          "inVLabel": "OntologyClassProperty",
+          "outVLabel": "Schema",
+          "inV": "V28",
+          "outV": "V22"
+        }
+      ]
+    },
+    "inE": {
+      "hasSchema": [
+        {
+          "id": "E24",
+          "label": "hasSchema",
+          "inVLabel": "Schema",
+          "outVLabel": "OntologyClass",
+          "inV": "V22",
+          "outV": "V18"
+        }
+      ]
+    },
+    "properties": {
+      "dispalyText": [
+        {
+          "id": "P12",
+          "value": "Environment",
+          "label": "dispalyText"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V23",
+    "label": "AnnotationProperty",
+    "inE": {
+      "hasModel": [
+        {
+          "id": "E26",
+          "label": "hasModel",
+          "inVLabel": "AnnotationProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V23",
+          "outV": "V16"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P42",
+          "value": "this is test value",
+          "label": "text"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V24",
+    "label": "OntologyClass",
+    "inE": {
+      "hasModel": [
+        {
+          "id": "E27",
+          "label": "hasModel",
+          "inVLabel": "OntologyClass",
+          "outVLabel": "OntologyClass",
+          "inV": "V24",
+          "outV": "V4"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P43",
+          "value": "tests tests",
+          "label": "text"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V25",
+    "label": "Environment",
+    "inE": {
+      "hasModel": [
+        {
+          "id": "E28",
+          "label": "hasModel",
+          "inVLabel": "Environment",
+          "outVLabel": "OntologyClass",
+          "inV": "V25",
+          "outV": "V18"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P44",
+          "value": "testEnvironment",
+          "label": "text"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V26",
+    "label": "DataProperty",
+    "inE": {
+      "hasModel": [
+        {
+          "id": "E29",
+          "label": "hasModel",
+          "inVLabel": "DataProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V26",
+          "outV": "V7"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P45",
+          "value": "Test Value",
+          "label": "text"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V27",
+    "label": "ObjectProperty",
+    "inE": {
+      "hasModel": [
+        {
+          "id": "E30",
+          "label": "hasModel",
+          "inVLabel": "ObjectProperty",
+          "outVLabel": "OntologyClass",
+          "inV": "V27",
+          "outV": "V5"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P46",
+          "value": "Test test ets",
+          "label": "text"
+        }
+      ]
+    }
+  },
+  {
+    "id": "V28",
+    "label": "OntologyClassProperty",
+    "inE": {
+      "hasOntologyClassProperty": [
+        {
+          "id": "E32",
+          "label": "hasOntologyClassProperty",
+          "inVLabel": "OntologyClassProperty",
+          "outVLabel": "Schema",
+          "inV": "V28",
+          "outV": "V22"
+        }
+      ]
+    },
+    "properties": {
+      "text": [
+        {
+          "id": "P56",
+          "value": "textValue",
+          "label": "text"
+        }
+      ]
+    }
+  }
+]

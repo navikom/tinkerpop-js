@@ -2,8 +2,6 @@
   karma configuration
  */
 
-var path = require('path');
-
 module.exports = function (config) {
   config.set({
     // Start these browsers, currently available:
@@ -14,7 +12,7 @@ module.exports = function (config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Firefox'],
+    browsers: ['ChromeHeadless'],
     files: [
       { pattern: 'tests.webpack.js', watched: false }
     ],

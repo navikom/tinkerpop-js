@@ -2,7 +2,6 @@ require('extract-text-webpack-plugin');
 
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'sourcemap',
@@ -45,9 +44,5 @@ module.exports = {
   plugins: [
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './views/index.ejs',
-      inject: false,
-    }),
   ],
 };
