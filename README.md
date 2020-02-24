@@ -43,12 +43,18 @@ conf.setProperty(TinkerGraph.GREMLIN_TINKERGRAPH_VERTEX_PROPERTY_ID_MANAGER, Tin
 conf.setProperty(TinkerGraph.GREMLIN_LOGS, false);
 ```
 
-### Sample usage
+### Graph traversal
 
 ```javascript
-const g = TinkerFactory.createModern().traversal();
+const graph = TinkerFactory.createModern(conf);
+const g = graph.traversal();
+
 g.addV("person").property("name", "stephen").iterate();
 
-g.V().values("name");
+const query = g.V().values("name");
+
+while (query.hasNext()){
+  query.next();
+}
 //output "marko", "vadas", "lop", "josh", "ripple", "peter", "stephen"
 ```
