@@ -14,17 +14,6 @@ Dependency module install
 
 `npm run test`
 
-### develop
-`npm run dev` : Run develop server
-
-You can see result in
-
-* OS X : http://0.0.0.0:8080,
-
-* Windows : http://localhost:8080
-
-## List of available tasks
-
 ### clean
 
  `rm -f dist/*`
